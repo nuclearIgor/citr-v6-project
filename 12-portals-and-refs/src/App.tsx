@@ -1,11 +1,11 @@
-import { useState, StrictMode } from "react";
+import { useState, StrictMode, FunctionComponent } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
 import ThemeContext from "./ThemeContext";
 
-const App = () => {
+const App: FunctionComponent = () => {
   const theme = useState("darkblue");
   return (
     <ThemeContext.Provider value={theme}>
