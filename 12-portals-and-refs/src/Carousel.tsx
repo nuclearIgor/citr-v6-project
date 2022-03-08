@@ -17,9 +17,12 @@ class Carousel extends Component<Props> {
     if(!(event.target instanceof HTMLElement)){
       return;
     }
-    this.setState({
-      active: +event.target.dataset.index,
-    });
+
+    if(event.target.dataset.index) {
+      this.setState({
+        active: +event.target.dataset.index,
+      });
+    }
   };
 
   render(): ReactNode {
