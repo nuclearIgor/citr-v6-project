@@ -2,7 +2,7 @@ import { useState, useEffect, useContext, FunctionComponent } from "react";
 import ThemeContext from "./ThemeContext";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
-import { PetAPIResponse, Animal, Pet} from "./APIResponseTypes";
+import { PetAPIResponse, Animal, Pet } from "./APIResponseTypes";
 
 const ANIMALS: Animal[] = ["bird", "cat", "dog", "rabbit", "reptile"];
 

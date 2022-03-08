@@ -1,12 +1,12 @@
-import {Component, FunctionComponent} from "react";
+import { Component, FunctionComponent } from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import ThemeContext from "./ThemeContext";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
-import {PetAPIResponse, Animal} from "./APIResponseTypes";
+import { PetAPIResponse, Animal } from "./APIResponseTypes";
 
-class Details extends Component<RouteComponentProps<{id: string}>> {
+class Details extends Component<RouteComponentProps<{ id: string }>> {
   state = {
     loading: true,
     showModal: false,
@@ -83,13 +83,12 @@ class Details extends Component<RouteComponentProps<{id: string}>> {
 
 const DetailsWithRouter = withRouter(Details);
 
-const DetailsErrorBoundary: FunctionComponent = function
-  DetailsErrorBoundary () {
-    return (
-      <ErrorBoundary>
-        <DetailsWithRouter />
-      </ErrorBoundary>
-    );
-}
+const DetailsErrorBoundary: FunctionComponent = function DetailsErrorBoundary() {
+  return (
+    <ErrorBoundary>
+      <DetailsWithRouter />
+    </ErrorBoundary>
+  );
+};
 
-export default DetailsErrorBoundary
+export default DetailsErrorBoundary;

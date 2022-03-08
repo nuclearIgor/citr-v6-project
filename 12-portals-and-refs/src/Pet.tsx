@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import {FunctionComponent} from "react";
+import { FunctionComponent } from "react";
 
-interface Props{
+interface Props {
   name: string;
   animal: string;
   breed: string;

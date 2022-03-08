@@ -1,4 +1,4 @@
-import {useEffect, useRef, FunctionComponent, MutableRefObject} from "react";
+import { useEffect, useRef, FunctionComponent, MutableRefObject } from "react";
 import { createPortal } from "react-dom";
 
 const modalRoot = document.getElementById("modal");
@@ -10,15 +10,15 @@ const Modal: FunctionComponent = ({ children }) => {
   }
 
   useEffect(() => {
-    if(!modalRoot || !elRef.current){
+    if (!modalRoot || !elRef.current) {
       return;
     }
     modalRoot.appendChild(elRef.current);
     return () => {
-      if(elRef.current){
+      if (elRef.current) {
         modalRoot.removeChild(elRef.current);
       }
-    }
+    };
   }, []);
 
   return createPortal(<div>{children}</div>, elRef.current);

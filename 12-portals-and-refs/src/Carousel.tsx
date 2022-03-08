@@ -1,7 +1,7 @@
 import { Component, MouseEvent, ReactNode } from "react";
 
 interface Props {
-  images: string[],
+  images: string[];
 }
 
 class Carousel extends Component<Props> {
@@ -14,11 +14,11 @@ class Carousel extends Component<Props> {
   };
 
   handleIndexClick = (event: MouseEvent<HTMLElement>): void => {
-    if(!(event.target instanceof HTMLElement)){
+    if (!(event.target instanceof HTMLElement)) {
       return;
     }
 
-    if(event.target.dataset.index) {
+    if (event.target.dataset.index) {
       this.setState({
         active: +event.target.dataset.index,
       });

@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 
 interface StateType {
   hasError: boolean;
-  redirect: boolean
+  redirect: boolean;
 }
 
 class ErrorBoundary extends Component {
